@@ -50,13 +50,25 @@
 				"inputs": [
 					{
 						"referenceName": "source_csv_file",
-						"type": "DatasetReference"
+						"type": "DatasetReference",
+						"parameters": {
+							"ds_filename": {
+								"value": "@pipeline().parameters.pp_filename",
+								"type": "Expression"
+							}
+						}
 					}
 				],
 				"outputs": [
 					{
 						"referenceName": "sink_csv",
-						"type": "DatasetReference"
+						"type": "DatasetReference",
+						"parameters": {
+							"ds_filename": {
+								"value": "@pipeline().parameters.pp_filename",
+								"type": "Expression"
+							}
+						}
 					}
 				]
 			},
