@@ -1,0 +1,9 @@
+{
+	"name": "sql_pipeline",
+	"properties": {
+		"folder": {
+			"name": "gopi_test"
+		},
+		"annotations": []
+	}
+}
