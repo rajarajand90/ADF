@@ -249,6 +249,17 @@
 									"value": "@equals(item().name,'SalesLTProduct.txt')",
 									"type": "Expression"
 								},
+								"ifFalseActivities": [
+									{
+										"name": "False_wait",
+										"type": "Wait",
+										"dependsOn": [],
+										"userProperties": [],
+										"typeProperties": {
+											"waitTimeInSeconds": 1
+										}
+									}
+								],
 								"ifTrueActivities": [
 									{
 										"name": "True_wait",
