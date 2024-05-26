@@ -17,6 +17,7 @@
 				"typeProperties": {
 					"source": {
 						"type": "AzureSqlSource",
+						"sqlReaderQuery": "select ProductID, Name, ProductNumber, Color from SalesLT.Product where Color = 'Red' ",
 						"queryTimeout": "02:00:00",
 						"partitionOption": "None"
 					},
@@ -52,7 +53,7 @@
 						"referenceName": "sink_csv",
 						"type": "DatasetReference",
 						"parameters": {
-							"ds_filename": "productextract.csv"
+							"ds_filename": "redproductextract.csv"
 						}
 					}
 				]
