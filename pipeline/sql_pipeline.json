@@ -17,7 +17,10 @@
 				"typeProperties": {
 					"source": {
 						"type": "AzureSqlSource",
-						"sqlReaderQuery": "select ProductID, Name, ProductNumber, Color from SalesLT.Product where Color = 'Red' ",
+						"sqlReaderQuery": {
+							"value": "@concat('select ProductID, Name, ProductNumber, Color from SalesLT.Product where Color = ''',pipeline().parameters.color,'''' )",
+							"type": "Expression"
+						},
 						"queryTimeout": "02:00:00",
 						"partitionOption": "None"
 					},
@@ -53,12 +56,20 @@
 						"referenceName": "sink_csv",
 						"type": "DatasetReference",
 						"parameters": {
-							"ds_filename": "redproductextract.csv"
+							"ds_filename": {
+								"value": "@concat(pipeline().parameters.color,'productextract.csv')",
+								"type": "Expression"
+							}
 						}
 					}
 				]
 			}
 		],
+		"parameters": {
+			"color": {
+				"type": "String"
+			}
+		},
 		"folder": {
 			"name": "gopi_test"
 		},
