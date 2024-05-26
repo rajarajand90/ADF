@@ -114,7 +114,8 @@
 							"ds_directory": {
 								"value": "@pipeline().parameters.Input_directory",
 								"type": "Expression"
-							}
+							},
+							"ds_filename": " "
 						}
 					},
 					"fieldList": [
