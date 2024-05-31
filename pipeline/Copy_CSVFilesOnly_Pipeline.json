@@ -116,10 +116,10 @@
 				"userProperties": [],
 				"typeProperties": {
 					"items": {
-						"value": "@activity('Filter with Contains function').output",
+						"value": "@activity('Filter with Contains function').output.childItems",
 						"type": "Expression"
 					},
-					"isSequential": true,
+					"isSequential": false,
 					"activities": [
 						{
 							"name": "CopyDataTrueIf",
@@ -128,7 +128,7 @@
 							"userProperties": [],
 							"typeProperties": {
 								"expression": {
-									"value": "@item()",
+									"value": "@item().count",
 									"type": "Expression"
 								},
 								"ifFalseActivities": [
