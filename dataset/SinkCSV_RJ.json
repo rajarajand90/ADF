@@ -8,6 +8,10 @@
 		"parameters": {
 			"ds_filename": {
 				"type": "String"
+			},
+			"ds_filenameRJ": {
+				"type": "String",
+				"defaultValue": "ds_filenameRJ"
 			}
 		},
 		"annotations": [],
@@ -16,7 +20,7 @@
 			"location": {
 				"type": "AzureBlobFSLocation",
 				"fileName": {
-					"value": "@dataset().ds_filename",
+					"value": "@dataset().ds_filenameRJ",
 					"type": "Expression"
 				},
 				"folderPath": "Output",
