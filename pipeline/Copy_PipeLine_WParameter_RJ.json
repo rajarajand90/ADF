@@ -148,8 +148,6 @@
 			{
 				"name": "Delete Output",
 				"type": "Delete",
-				"state": "Inactive",
-				"onInactiveMarkAs": "Succeeded",
 				"dependsOn": [
 					{
 						"activity": "Copy Data From Output to Archieve",
