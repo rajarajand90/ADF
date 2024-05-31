@@ -233,12 +233,16 @@
 				"type": "string",
 				"defaultValue": "project"
 			},
-			"Directory_RJ": {
+			"InputDirectory_RJ": {
 				"type": "string",
 				"defaultValue": "Output"
 			},
 			"Filename_RJ": {
 				"type": "string"
+			},
+			"OutputDirectory_RJ": {
+				"type": "string",
+				"defaultValue": "Archieve"
 			}
 		},
 		"folder": {
