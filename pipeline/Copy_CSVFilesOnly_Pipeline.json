@@ -116,7 +116,7 @@
 				"userProperties": [],
 				"typeProperties": {
 					"items": {
-						"value": "@activity('Filter with Contains function').output.pipelineReturnValue",
+						"value": "@activity('Filter with Contains function').output",
 						"type": "Expression"
 					},
 					"isSequential": true,
