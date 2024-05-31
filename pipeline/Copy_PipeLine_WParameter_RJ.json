@@ -56,7 +56,10 @@
 				"outputs": [
 					{
 						"referenceName": "SinkCSV_RJ",
-						"type": "DatasetReference"
+						"type": "DatasetReference",
+						"parameters": {
+							"ds_filenameRJ": "ds_filenameRJ"
+						}
 					}
 				]
 			},
@@ -114,14 +117,20 @@
 				},
 				"inputs": [
 					{
-						"referenceName": "2SourceCSV_RJ",
-						"type": "DatasetReference"
+						"referenceName": "SinkCSV_RJ",
+						"type": "DatasetReference",
+						"parameters": {
+							"ds_filenameRJ": "ds_filenameRJ"
+						}
 					}
 				],
 				"outputs": [
 					{
-						"referenceName": "2SinkCSV_RJ",
-						"type": "DatasetReference"
+						"referenceName": "SinkCSV_RJ",
+						"type": "DatasetReference",
+						"parameters": {
+							"ds_filenameRJ": "ds_filenameRJ"
+						}
 					}
 				]
 			},
