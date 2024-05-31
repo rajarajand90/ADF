@@ -116,7 +116,7 @@
 				"userProperties": [],
 				"typeProperties": {
 					"items": {
-						"value": "@activity('Filter with Contains function').output.childItems",
+						"value": "@activity('Filter with Contains function').output.FilteredItemsCount",
 						"type": "Expression"
 					},
 					"isSequential": false,
