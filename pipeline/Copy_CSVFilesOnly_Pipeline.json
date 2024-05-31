@@ -44,7 +44,25 @@
 				}
 			},
 			{
-				"name": "Filter1",
+				"name": "Filter with endswith function",
+				"type": "Filter",
+				"state": "Inactive",
+				"onInactiveMarkAs": "Succeeded",
+				"dependsOn": [],
+				"userProperties": [],
+				"typeProperties": {
+					"items": {
+						"value": "@activity('Get Metadata for files').output.childItems",
+						"type": "Expression"
+					},
+					"condition": {
+						"value": "@endswith(item().name,'.csv')",
+						"type": "Expression"
+					}
+				}
+			},
+			{
+				"name": "Filter with Contains function",
 				"type": "Filter",
 				"dependsOn": [
 					{
@@ -61,7 +79,7 @@
 						"type": "Expression"
 					},
 					"condition": {
-						"value": "@endswith(item().name,'.csv')",
+						"value": "@contains(item().name,'.csv')",
 						"type": "Expression"
 					}
 				}
