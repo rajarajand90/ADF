@@ -16,25 +16,20 @@
 				"userProperties": [],
 				"typeProperties": {
 					"dataset": {
-						"referenceName": "SRC_Paramtr_CSV",
+						"referenceName": "SRC_Paramtr1_CSV",
 						"type": "DatasetReference",
 						"parameters": {
-							"ds_fs_RJ": {
+							"ds_filesys_RJ": {
 								"value": "@pipeline().parameters.FileSystem_RJ",
 								"type": "Expression"
 							},
-							"ds_dir_RJ": {
+							"ds_Direc_RJ": {
 								"value": "@pipeline().parameters.Directory_RJ",
 								"type": "Expression"
-							},
-							"ds_filenm_RJ": "ds_filenm_RJ"
+							}
 						}
 					},
-					"fieldList": [
-						"itemName",
-						"itemType",
-						"childItems"
-					],
+					"fieldList": [],
 					"storeSettings": {
 						"type": "AzureBlobFSReadSettings",
 						"enablePartitionDiscovery": false
