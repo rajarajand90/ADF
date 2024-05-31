@@ -196,7 +196,7 @@
 											"type": "Expression"
 										},
 										"ds_dir_RJ": {
-											"value": "@pipeline().parameters.Directory_RJ",
+											"value": "@pipeline().parameters.OutputDirectory_RJ",
 											"type": "Expression"
 										},
 										"ds_filenme_RJ": {
