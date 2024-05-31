@@ -64,14 +64,9 @@
 			{
 				"name": "Filter with split function",
 				"type": "Filter",
-				"dependsOn": [
-					{
-						"activity": "Get Metadata for files",
-						"dependencyConditions": [
-							"Succeeded"
-						]
-					}
-				],
+				"state": "Inactive",
+				"onInactiveMarkAs": "Succeeded",
+				"dependsOn": [],
 				"userProperties": [],
 				"typeProperties": {
 					"items": {
@@ -87,9 +82,14 @@
 			{
 				"name": "Filter with Contains function",
 				"type": "Filter",
-				"state": "Inactive",
-				"onInactiveMarkAs": "Succeeded",
-				"dependsOn": [],
+				"dependsOn": [
+					{
+						"activity": "Get Metadata for files",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
 				"userProperties": [],
 				"typeProperties": {
 					"items": {
