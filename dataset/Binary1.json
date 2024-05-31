@@ -5,12 +5,21 @@
 			"referenceName": "AzureDataLakeStorage1",
 			"type": "LinkedServiceReference"
 		},
+		"parameters": {
+			"ds_filename_RJ": {
+				"type": "String",
+				"defaultValue": "ds_filename_RJ"
+			}
+		},
 		"annotations": [],
 		"type": "Binary",
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobFSLocation",
-				"fileName": "SinkCSV_RJ",
+				"fileName": {
+					"value": "@dataset().ds_filename_RJ",
+					"type": "Expression"
+				},
 				"folderPath": "Output",
 				"fileSystem": "project"
 			}
