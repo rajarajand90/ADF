@@ -128,7 +128,7 @@
 							"userProperties": [],
 							"typeProperties": {
 								"expression": {
-									"value": "@item().count",
+									"value": "@item()",
 									"type": "Expression"
 								},
 								"ifFalseActivities": [
