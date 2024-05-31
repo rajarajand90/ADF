@@ -10,6 +10,7 @@
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobFSLocation",
+				"fileName": "2SinkCSV_RJ",
 				"folderPath": "Archieve",
 				"fileSystem": "project"
 			},
