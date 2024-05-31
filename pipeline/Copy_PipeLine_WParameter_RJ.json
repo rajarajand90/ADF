@@ -166,13 +166,10 @@
 				"userProperties": [],
 				"typeProperties": {
 					"dataset": {
-						"referenceName": "ArchieveCSV_RJ",
+						"referenceName": "SinkCSV_RJ",
 						"type": "DatasetReference",
 						"parameters": {
-							"ds_filename_RJ": {
-								"value": "@pipeline().parameters.pp_filenameRJ",
-								"type": "Expression"
-							}
+							"ds_filenameRJ": "ds_filenameRJ"
 						}
 					},
 					"enableLogging": false,
