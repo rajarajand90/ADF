@@ -103,7 +103,7 @@
 				}
 			},
 			{
-				"name": "ForEach1",
+				"name": "ForEach_CopyFilteredCSVFiles",
 				"type": "ForEach",
 				"dependsOn": [
 					{
@@ -115,9 +115,14 @@
 				],
 				"userProperties": [],
 				"typeProperties": {
+					"items": {
+						"value": "@activity('Filter with Contains function').output.pipelineReturnValue",
+						"type": "Expression"
+					},
+					"isSequential": true,
 					"activities": [
 						{
-							"name": "If Condition1",
+							"name": "CopyDataTrueIf",
 							"type": "IfCondition",
 							"dependsOn": [],
 							"userProperties": [],
@@ -135,7 +140,7 @@
 								],
 								"ifTrueActivities": [
 									{
-										"name": "Trueif",
+										"name": "CopyData Filtered CSV Files",
 										"type": "Copy",
 										"dependsOn": [],
 										"policy": {
@@ -162,8 +167,18 @@
 										},
 										"inputs": [
 											{
-												"referenceName": "Src_parameter_CSV_RJ",
-												"type": "DatasetReference"
+												"referenceName": "SRC_Paramtr_CSV",
+												"type": "DatasetReference",
+												"parameters": {
+													"ds_fs_RJ": {
+														"value": "@pipeline().parameters.FileSystem_RJ",
+														"type": "Expression"
+													},
+													"ds_dir_RJ": {
+														"value": "@pipeline().parameters.Directory_RJ",
+														"type": "Expression"
+													}
+												}
 											}
 										]
 									}
