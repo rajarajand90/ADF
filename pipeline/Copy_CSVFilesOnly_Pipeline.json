@@ -26,7 +26,8 @@
 							"ds_dir_RJ": {
 								"value": "@pipeline().parameters.Directory_RJ",
 								"type": "Expression"
-							}
+							},
+							"ds_filenm_RJ": "ds_filenm_RJ"
 						}
 					},
 					"fieldList": [
@@ -254,19 +255,16 @@
 		],
 		"parameters": {
 			"FileSystem_RJ": {
-				"type": "string",
-				"defaultValue": "project"
+				"type": "string"
 			},
 			"Directory_RJ": {
-				"type": "string",
-				"defaultValue": "Output"
+				"type": "string"
 			},
 			"Filename_RJ": {
 				"type": "string"
 			},
 			"OutputDirectory_RJ": {
-				"type": "string",
-				"defaultValue": "Archieve"
+				"type": "string"
 			}
 		},
 		"folder": {
