@@ -62,7 +62,7 @@
 				}
 			},
 			{
-				"name": "Filter with Contains function",
+				"name": "Filter with split function",
 				"type": "Filter",
 				"dependsOn": [
 					{
@@ -72,6 +72,24 @@
 						]
 					}
 				],
+				"userProperties": [],
+				"typeProperties": {
+					"items": {
+						"value": "@activity('Get Metadata for files').output.childItems",
+						"type": "Expression"
+					},
+					"condition": {
+						"value": "@split(item().name,'.csv')[2]",
+						"type": "Expression"
+					}
+				}
+			},
+			{
+				"name": "Filter with Contains function",
+				"type": "Filter",
+				"state": "Inactive",
+				"onInactiveMarkAs": "Succeeded",
+				"dependsOn": [],
 				"userProperties": [],
 				"typeProperties": {
 					"items": {
