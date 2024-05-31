@@ -224,6 +224,22 @@
 												}
 											}
 										]
+									},
+									{
+										"name": "Wait2",
+										"type": "Wait",
+										"dependsOn": [
+											{
+												"activity": "CopyData Filtered CSV Files",
+												"dependencyConditions": [
+													"Succeeded"
+												]
+											}
+										],
+										"userProperties": [],
+										"typeProperties": {
+											"waitTimeInSeconds": 1
+										}
 									}
 								]
 							}
