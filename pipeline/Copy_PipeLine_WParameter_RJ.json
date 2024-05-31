@@ -126,10 +126,10 @@
 				],
 				"outputs": [
 					{
-						"referenceName": "SinkCSV_RJ",
+						"referenceName": "ArchieveCSV_RJ",
 						"type": "DatasetReference",
 						"parameters": {
-							"ds_filenameRJ": "ds_filenameRJ"
+							"ds_filename_RJ": "ds_filename_RJ"
 						}
 					}
 				]
@@ -155,8 +155,11 @@
 				"userProperties": [],
 				"typeProperties": {
 					"dataset": {
-						"referenceName": "Binary1",
-						"type": "DatasetReference"
+						"referenceName": "ArchieveCSV_RJ",
+						"type": "DatasetReference",
+						"parameters": {
+							"ds_filename_RJ": "ds_filename_RJ"
+						}
 					},
 					"enableLogging": false,
 					"storeSettings": {
