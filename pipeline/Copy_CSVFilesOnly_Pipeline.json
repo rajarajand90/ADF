@@ -22,6 +22,14 @@
 							"ds_filenameRJ": {
 								"value": "@pipeline().parameters.Filename_RJ",
 								"type": "Expression"
+							},
+							"ds_Directory_RJ": {
+								"value": "@pipeline().parameters.Directory_RJ",
+								"type": "Expression"
+							},
+							"ds_fs_RJ": {
+								"value": "@pipeline().parameters.FileSystem_RJ",
+								"type": "Expression"
 							}
 						}
 					},
