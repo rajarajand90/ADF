@@ -254,16 +254,19 @@
 		],
 		"parameters": {
 			"FileSystem_RJ": {
-				"type": "string"
+				"type": "string",
+				"defaultValue": "project"
 			},
 			"Directory_RJ": {
-				"type": "string"
+				"type": "string",
+				"defaultValue": "Output"
 			},
 			"Filename_RJ": {
 				"type": "string"
 			},
 			"OutputDirectory_RJ": {
-				"type": "string"
+				"type": "string",
+				"defaultValue": "Archieve"
 			}
 		},
 		"folder": {
