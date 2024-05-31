@@ -220,10 +220,6 @@
 													"ds_dir_RJ": {
 														"value": "@pipeline().parameters.OutputDirectory_RJ",
 														"type": "Expression"
-													},
-													"ds_filenme_RJ": {
-														"value": "@pipeline().parameters.Filename_RJ",
-														"type": "Expression"
 													}
 												}
 											}
