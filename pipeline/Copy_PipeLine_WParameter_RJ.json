@@ -169,6 +169,7 @@
 						"referenceName": "SinkCSV_RJ",
 						"type": "DatasetReference",
 						"parameters": {
+							"ds_filename": "ds_filename",
 							"ds_filenameRJ": "ds_filenameRJ"
 						}
 					},
