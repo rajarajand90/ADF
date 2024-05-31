@@ -16,11 +16,10 @@
 				"userProperties": [],
 				"typeProperties": {
 					"dataset": {
-						"referenceName": "SinkCSV_RJ",
+						"referenceName": "Src_parameter_CSV_RJ",
 						"type": "DatasetReference",
 						"parameters": {
-							"ds_filename": "ds_filename",
-							"ds_Directory_RJ": {
+							"ds_directory_RJ": {
 								"value": "@pipeline().parameters.Directory_RJ",
 								"type": "Expression"
 							},
