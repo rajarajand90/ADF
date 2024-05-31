@@ -158,11 +158,6 @@
 				}
 			}
 		],
-		"parameters": {
-			"USDFilenme": {
-				"type": "string"
-			}
-		},
 		"folder": {
 			"name": "Rajan_Practice"
 		},
