@@ -20,10 +20,6 @@
 						"type": "DatasetReference",
 						"parameters": {
 							"ds_filename": "ds_filename",
-							"ds_filenameRJ": {
-								"value": "@pipeline().parameters.Filename_RJ",
-								"type": "Expression"
-							},
 							"ds_Directory_RJ": {
 								"value": "@pipeline().parameters.Directory_RJ",
 								"type": "Expression"
