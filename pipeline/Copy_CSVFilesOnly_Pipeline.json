@@ -213,6 +213,10 @@
 														"value": "@pipeline().parameters.FileSystem_RJ",
 														"type": "Expression"
 													},
+													"ds_dir_RJ": {
+														"value": "@pipeline().parameters.OutputDirectory_RJ",
+														"type": "Expression"
+													},
 													"ds_filenme_RJ": {
 														"value": "@pipeline().parameters.Filename_RJ",
 														"type": "Expression"
@@ -233,7 +237,7 @@
 				"type": "string",
 				"defaultValue": "project"
 			},
-			"InputDirectory_RJ": {
+			"Directory_RJ": {
 				"type": "string",
 				"defaultValue": "Output"
 			},
