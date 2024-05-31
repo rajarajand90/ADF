@@ -127,6 +127,10 @@
 							"dependsOn": [],
 							"userProperties": [],
 							"typeProperties": {
+								"expression": {
+									"value": "@item()",
+									"type": "Expression"
+								},
 								"ifFalseActivities": [
 									{
 										"name": "Wait1",
