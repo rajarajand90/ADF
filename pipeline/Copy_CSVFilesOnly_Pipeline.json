@@ -16,15 +16,15 @@
 				"userProperties": [],
 				"typeProperties": {
 					"dataset": {
-						"referenceName": "Src_parameter_CSV_RJ",
+						"referenceName": "SRC_Paramtr_CSV",
 						"type": "DatasetReference",
 						"parameters": {
-							"ds_directory_RJ": {
-								"value": "@pipeline().parameters.Directory_RJ",
-								"type": "Expression"
-							},
 							"ds_fs_RJ": {
 								"value": "@pipeline().parameters.FileSystem_RJ",
+								"type": "Expression"
+							},
+							"ds_dir_RJ": {
+								"value": "@pipeline().parameters.Directory_RJ",
 								"type": "Expression"
 							}
 						}
