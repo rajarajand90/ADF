@@ -26,7 +26,8 @@
 							"ds_dir_RJ": {
 								"value": "@pipeline().parameters.Directory_RJ",
 								"type": "Expression"
-							}
+							},
+							"ds_filenm_RJ": "ds_filenm_RJ"
 						}
 					},
 					"fieldList": [
