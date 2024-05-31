@@ -59,7 +59,10 @@
 						"type": "DatasetReference",
 						"parameters": {
 							"ds_filename": "ds_filename",
-							"ds_filenameRJ": "ds_filenameRJ"
+							"ds_filenameRJ": {
+								"value": "@pipeline().parameters.pp_filenameRJ",
+								"type": "Expression"
+							}
 						}
 					}
 				]
@@ -122,7 +125,10 @@
 						"type": "DatasetReference",
 						"parameters": {
 							"ds_filename": "ds_filename",
-							"ds_filenameRJ": "ds_filenameRJ"
+							"ds_filenameRJ": {
+								"value": "@pipeline().parameters.pp_filenameRJ",
+								"type": "Expression"
+							}
 						}
 					}
 				],
@@ -131,7 +137,10 @@
 						"referenceName": "ArchieveCSV_RJ",
 						"type": "DatasetReference",
 						"parameters": {
-							"ds_filename_RJ": "ds_filename_RJ"
+							"ds_filename_RJ": {
+								"value": "@pipeline().parameters.pp_filenameRJ",
+								"type": "Expression"
+							}
 						}
 					}
 				]
@@ -160,7 +169,10 @@
 						"referenceName": "ArchieveCSV_RJ",
 						"type": "DatasetReference",
 						"parameters": {
-							"ds_filename_RJ": "ds_filename_RJ"
+							"ds_filename_RJ": {
+								"value": "@pipeline().parameters.pp_filenameRJ",
+								"type": "Expression"
+							}
 						}
 					},
 					"enableLogging": false,
