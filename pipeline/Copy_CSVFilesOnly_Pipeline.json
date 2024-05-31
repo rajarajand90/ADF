@@ -163,7 +163,26 @@
 													"type": "DelimitedTextReadSettings"
 												}
 											},
-											"enableStaging": false
+											"sink": {
+												"type": "DelimitedTextSink",
+												"storeSettings": {
+													"type": "AzureBlobFSWriteSettings"
+												},
+												"formatSettings": {
+													"type": "DelimitedTextWriteSettings",
+													"quoteAllText": true,
+													"fileExtension": ".txt"
+												}
+											},
+											"enableStaging": false,
+											"translator": {
+												"type": "TabularTranslator",
+												"typeConversion": true,
+												"typeConversionSettings": {
+													"allowDataTruncation": true,
+													"treatBooleanAsNumber": false
+												}
+											}
 										},
 										"inputs": [
 											{
@@ -176,6 +195,26 @@
 													},
 													"ds_dir_RJ": {
 														"value": "@pipeline().parameters.Directory_RJ",
+														"type": "Expression"
+													},
+													"ds_filenm_RJ": {
+														"value": "@item().name",
+														"type": "Expression"
+													}
+												}
+											}
+										],
+										"outputs": [
+											{
+												"referenceName": "SINK_paramtr_CSV",
+												"type": "DatasetReference",
+												"parameters": {
+													"ds_fs_RJ": {
+														"value": "@pipeline().parameters.FileSystem_RJ",
+														"type": "Expression"
+													},
+													"ds_filenme_RJ": {
+														"value": "@pipeline().parameters.Filename_RJ",
 														"type": "Expression"
 													}
 												}
