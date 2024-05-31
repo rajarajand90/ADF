@@ -128,7 +128,14 @@
 			{
 				"name": "Delete Output",
 				"type": "Delete",
-				"dependsOn": [],
+				"dependsOn": [
+					{
+						"activity": "Copy Data From Output to Archieve",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
 				"policy": {
 					"timeout": "0.12:00:00",
 					"retry": 0,
@@ -142,7 +149,7 @@
 						"referenceName": "Binary1",
 						"type": "DatasetReference"
 					},
-					"enableLogging": true,
+					"enableLogging": false,
 					"storeSettings": {
 						"type": "AzureBlobFSReadSettings",
 						"recursive": true,
