@@ -14,6 +14,12 @@
 			},
 			"ds_filenme_RJ": {
 				"type": "String"
+			},
+			"ds_directory_RJ": {
+				"type": "String"
+			},
+			"ds_fs_RJ": {
+				"type": "String"
 			}
 		},
 		"annotations": [],
@@ -22,11 +28,11 @@
 			"location": {
 				"type": "AzureBlobFSLocation",
 				"folderPath": {
-					"value": "@dataset().ds_filename_RJ",
+					"value": "@dataset().ds_directory_RJ",
 					"type": "Expression"
 				},
 				"fileSystem": {
-					"value": "@dataset().df_fs_RJ",
+					"value": "@dataset().ds_fs_RJ",
 					"type": "Expression"
 				}
 			},
