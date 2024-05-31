@@ -12,6 +12,12 @@
 			"ds_filenameRJ": {
 				"type": "String",
 				"defaultValue": "ds_filenameRJ"
+			},
+			"ds_Directory_RJ": {
+				"type": "String"
+			},
+			"ds_fs_RJ": {
+				"type": "String"
 			}
 		},
 		"annotations": [],
@@ -23,8 +29,14 @@
 					"value": "@dataset().ds_filenameRJ",
 					"type": "Expression"
 				},
-				"folderPath": "Output",
-				"fileSystem": "project"
+				"folderPath": {
+					"value": "@dataset().ds_Directory_RJ",
+					"type": "Expression"
+				},
+				"fileSystem": {
+					"value": "@dataset().ds_fs_RJ",
+					"type": "Expression"
+				}
 			},
 			"columnDelimiter": ",",
 			"escapeChar": "\\",
