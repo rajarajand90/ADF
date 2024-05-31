@@ -188,8 +188,7 @@
 		],
 		"parameters": {
 			"pp_filenameRJ": {
-				"type": "string",
-				"defaultValue": "pp_filenameRJ"
+				"type": "string"
 			}
 		},
 		"folder": {
