@@ -208,7 +208,26 @@
 												"type": "DelimitedTextReadSettings"
 											}
 										},
-										"enableStaging": false
+										"sink": {
+											"type": "DelimitedTextSink",
+											"storeSettings": {
+												"type": "AzureBlobFSWriteSettings"
+											},
+											"formatSettings": {
+												"type": "DelimitedTextWriteSettings",
+												"quoteAllText": true,
+												"fileExtension": ".txt"
+											}
+										},
+										"enableStaging": false,
+										"translator": {
+											"type": "TabularTranslator",
+											"typeConversion": true,
+											"typeConversionSettings": {
+												"allowDataTruncation": true,
+												"treatBooleanAsNumber": false
+											}
+										}
 									},
 									"inputs": [
 										{
@@ -217,6 +236,26 @@
 											"parameters": {
 												"ds_FS": {
 													"value": "@pipeline().parameters.FileSystem_RJ",
+													"type": "Expression"
+												},
+												"ds_Direct": {
+													"value": "@pipeline().parameters.OutputDirectory_RJ",
+													"type": "Expression"
+												}
+											}
+										}
+									],
+									"outputs": [
+										{
+											"referenceName": "SW_Sink_DS",
+											"type": "DatasetReference",
+											"parameters": {
+												"ds_FS_Sink": {
+													"value": "@pipeline().parameters.FileSystem_RJ",
+													"type": "Expression"
+												},
+												"ds_DIR_Sink": {
+													"value": "@concat(pipeline().parameters.OutputDirectory_RJ,'/XML_Files/')\n\n",
 													"type": "Expression"
 												}
 											}
