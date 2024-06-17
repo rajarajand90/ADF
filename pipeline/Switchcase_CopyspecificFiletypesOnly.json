@@ -297,7 +297,7 @@
 			},
 			"Filetype_RJ": {
 				"type": "string",
-				"defaultValue": ".csv"
+				"defaultValue": ".xml"
 			}
 		},
 		"folder": {
