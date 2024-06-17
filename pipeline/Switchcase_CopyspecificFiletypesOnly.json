@@ -76,7 +76,7 @@
 				"userProperties": [],
 				"typeProperties": {
 					"items": {
-						"value": "@activity('Get Metadata for files').output.value",
+						"value": "@activity('Get Metadata for files').output.childItems",
 						"type": "Expression"
 					},
 					"isSequential": false,
@@ -88,12 +88,12 @@
 							"userProperties": [],
 							"typeProperties": {
 								"on": {
-									"value": "@pipeline().parameters.Filetype_RJ",
+									"value": "@split(item().name,'.')[1]",
 									"type": "Expression"
 								},
 								"cases": [
 									{
-										"value": ".xml",
+										"value": "xml",
 										"activities": [
 											{
 												"name": "Copy data1",
