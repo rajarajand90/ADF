@@ -63,8 +63,8 @@
 				}
 			},
 			{
-				"name": "Switch_CopyXMLCSVTXTfiles",
-				"type": "Switch",
+				"name": "ForEach_CopyFilteredXMLCSVTXTFiles",
+				"type": "ForEach",
 				"dependsOn": [
 					{
 						"activity": "Get Metadata for files",
@@ -75,103 +75,122 @@
 				],
 				"userProperties": [],
 				"typeProperties": {
-					"on": {
-						"value": "@pipeline().parameters.Filetype_RJ",
+					"items": {
+						"value": "@activity('Get Metadata for files').output.value",
 						"type": "Expression"
 					},
-					"cases": [
+					"isSequential": false,
+					"activities": [
 						{
-							"value": ".xml",
-							"activities": [
-								{
-									"name": "Copy data1",
-									"type": "Copy",
-									"dependsOn": [],
-									"policy": {
-										"timeout": "0.12:00:00",
-										"retry": 0,
-										"retryIntervalInSeconds": 30,
-										"secureOutput": false,
-										"secureInput": false
-									},
-									"userProperties": [],
-									"typeProperties": {
-										"source": {
-											"type": "DelimitedTextSource",
-											"storeSettings": {
-												"type": "AzureBlobFSReadSettings",
-												"recursive": true,
-												"enablePartitionDiscovery": false
-											},
-											"formatSettings": {
-												"type": "DelimitedTextReadSettings"
-											}
-										},
-										"sink": {
-											"type": "DelimitedTextSink",
-											"storeSettings": {
-												"type": "AzureBlobFSWriteSettings"
-											},
-											"formatSettings": {
-												"type": "DelimitedTextWriteSettings",
-												"quoteAllText": true,
-												"fileExtension": ".txt"
-											}
-										},
-										"enableStaging": false,
-										"translator": {
-											"type": "TabularTranslator",
-											"typeConversion": true,
-											"typeConversionSettings": {
-												"allowDataTruncation": true,
-												"treatBooleanAsNumber": false
-											}
-										}
-									},
-									"inputs": [
-										{
-											"referenceName": "SW_SRC_DS",
-											"type": "DatasetReference",
-											"parameters": {
-												"ds_FS": {
-													"value": "@pipeline().parameters.FileSystem_RJ",
-													"type": "Expression"
-												},
-												"ds_Direct": {
-													"value": "@pipeline().parameters.Directory_RJ",
-													"type": "Expression"
-												}
-											}
-										}
-									],
-									"outputs": [
-										{
-											"referenceName": "SW_Sink_DS",
-											"type": "DatasetReference",
-											"parameters": {
-												"ds_FS_Sink": {
-													"value": "@pipeline().parameters.FileSystem_RJ",
-													"type": "Expression"
-												},
-												"ds_DIR_Sink": {
-													"value": "@concat(pipeline().parameters.Directory_RJ,'/XML_Files/')\n\n",
-													"type": "Expression"
-												}
-											}
-										}
-									]
-								}
-							]
-						}
-					],
-					"defaultActivities": [
-						{
-							"name": "Wait1",
-							"type": "Wait",
+							"name": "Switch_CopyXMLCSVTXTfiles",
+							"type": "Switch",
 							"dependsOn": [],
 							"userProperties": [],
 							"typeProperties": {
-								"waitTimeInSeconds": 1
+								"on": {
+									"value": "@pipeline().parameters.Filetype_RJ",
+									"type": "Expression"
+								},
+								"cases": [
+									{
+										"value": ".xml",
+										"activities": [
+											{
+												"name": "Copy data1",
+												"type": "Copy",
+												"dependsOn": [],
+												"policy": {
+													"timeout": "0.12:00:00",
+													"retry": 0,
+													"retryIntervalInSeconds": 30,
+													"secureOutput": false,
+													"secureInput": false
+												},
+												"userProperties": [],
+												"typeProperties": {
+													"source": {
+														"type": "DelimitedTextSource",
+														"storeSettings": {
+															"type": "AzureBlobFSReadSettings",
+															"recursive": true,
+															"enablePartitionDiscovery": false
+														},
+														"formatSettings": {
+															"type": "DelimitedTextReadSettings"
+														}
+													},
+													"sink": {
+														"type": "DelimitedTextSink",
+														"storeSettings": {
+															"type": "AzureBlobFSWriteSettings"
+														},
+														"formatSettings": {
+															"type": "DelimitedTextWriteSettings",
+															"quoteAllText": true,
+															"fileExtension": ".txt"
+														}
+													},
+													"enableStaging": false,
+													"translator": {
+														"type": "TabularTranslator",
+														"typeConversion": true,
+														"typeConversionSettings": {
+															"allowDataTruncation": true,
+															"treatBooleanAsNumber": false
+														}
+													}
+												},
+												"inputs": [
+													{
+														"referenceName": "SW_SRC_DS",
+														"type": "DatasetReference",
+														"parameters": {
+															"ds_FS": {
+																"value": "@pipeline().parameters.FileSystem_RJ",
+																"type": "Expression"
+															},
+															"ds_Direct": {
+																"value": "@pipeline().parameters.Directory_RJ",
+																"type": "Expression"
+															},
+															"ds_Filename": {
+																"value": "@item().name",
+																"type": "Expression"
+															}
+														}
+													}
+												],
+												"outputs": [
+													{
+														"referenceName": "SW_Sink_DS",
+														"type": "DatasetReference",
+														"parameters": {
+															"ds_FS_Sink": {
+																"value": "@pipeline().parameters.FileSystem_RJ",
+																"type": "Expression"
+															},
+															"ds_DIR_Sink": {
+																"value": "@concat(pipeline().parameters.Directory_RJ,'/XML_Files/')\n\n",
+																"type": "Expression"
+															}
+														}
+													}
+												]
+											}
+										]
+									}
+								],
+								"defaultActivities": [
+									{
+										"name": "Wait1",
+										"type": "Wait",
+										"dependsOn": [],
+										"userProperties": [],
+										"typeProperties": {
+											"waitTimeInSeconds": 1
+										}
+									}
+								]
 							}
 						}
 					]
