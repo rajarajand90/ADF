@@ -9,7 +9,7 @@
 			"ds_FS": {
 				"type": "string"
 			},
-			"ds_DIR": {
+			"ds_Direct": {
 				"type": "string"
 			}
 		},
