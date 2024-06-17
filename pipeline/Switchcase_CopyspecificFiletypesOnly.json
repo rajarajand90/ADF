@@ -213,7 +213,13 @@
 									"inputs": [
 										{
 											"referenceName": "SW_SRC_DS",
-											"type": "DatasetReference"
+											"type": "DatasetReference",
+											"parameters": {
+												"ds_FS": {
+													"value": "@pipeline().parameters.FileSystem_RJ",
+													"type": "Expression"
+												}
+											}
 										}
 									]
 								}
