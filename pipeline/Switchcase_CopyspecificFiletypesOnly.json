@@ -170,7 +170,7 @@
 																"type": "Expression"
 															},
 															"ds_DIR_Sink": {
-																"value": "@concat(pipeline().parameters.Directory_RJ,'/XML_Files/')\n\n",
+																"value": "@concat(pipeline().parameters.Directory_RJ,'/SC_XML_Files')\n\n",
 																"type": "Expression"
 															}
 														}
