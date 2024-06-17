@@ -208,14 +208,6 @@
 			},
 			"Filename_RJ": {
 				"type": "string"
-			},
-			"OutputDirectory_RJ": {
-				"type": "string",
-				"defaultValue": "Archieve"
-			},
-			"Filetype_RJ": {
-				"type": "string",
-				"defaultValue": ".xml"
 			}
 		},
 		"folder": {
