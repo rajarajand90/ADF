@@ -205,9 +205,6 @@
 			"Directory_RJ": {
 				"type": "string",
 				"defaultValue": "Output"
-			},
-			"Filename_RJ": {
-				"type": "string"
 			}
 		},
 		"folder": {
