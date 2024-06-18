@@ -17,7 +17,15 @@
 		"type": "DelimitedText",
 		"typeProperties": {
 			"location": {
-				"type": "AzureBlobFSLocation"
+				"type": "AzureBlobFSLocation",
+				"folderPath": {
+					"value": "@dataset().ds_DIR_Sink",
+					"type": "Expression"
+				},
+				"fileSystem": {
+					"value": "@dataset().ds_FS_Sink",
+					"type": "Expression"
+				}
 			},
 			"columnDelimiter": ",",
 			"escapeChar": "\\",
