@@ -47,9 +47,14 @@
 			{
 				"name": "Filter with Contains function",
 				"type": "Filter",
-				"state": "Inactive",
-				"onInactiveMarkAs": "Succeeded",
-				"dependsOn": [],
+				"dependsOn": [
+					{
+						"activity": "Get Metadata for files",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
 				"userProperties": [],
 				"typeProperties": {
 					"items": {
@@ -57,7 +62,7 @@
 						"type": "Expression"
 					},
 					"condition": {
-						"value": "@contains(item().name,pipeline().parameters.Filetype_RJ)",
+						"value": "@contains(item().type,'file')",
 						"type": "Expression"
 					}
 				}
@@ -67,7 +72,7 @@
 				"type": "ForEach",
 				"dependsOn": [
 					{
-						"activity": "Get Metadata for files",
+						"activity": "Filter with Contains function",
 						"dependencyConditions": [
 							"Succeeded"
 						]
