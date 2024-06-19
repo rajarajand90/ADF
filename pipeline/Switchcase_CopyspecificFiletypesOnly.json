@@ -81,7 +81,7 @@
 				"userProperties": [],
 				"typeProperties": {
 					"items": {
-						"value": "@activity('Get Metadata for files').output.value",
+						"value": "@activity('Get Metadata for files').output.value.name",
 						"type": "Expression"
 					},
 					"isSequential": false,
