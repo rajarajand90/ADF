@@ -95,7 +95,7 @@
 						"type": "Expression"
 					},
 					"condition": {
-						"value": "@item().name",
+						"value": "@contains(item().name,'SalesLTAddress.txt')",
 						"type": "Expression"
 					}
 				}
@@ -114,12 +114,23 @@
 				"userProperties": [],
 				"typeProperties": {
 					"dataset": {
-						"referenceName": "SourceCSV_RJ",
-						"type": "DatasetReference"
+						"referenceName": "SRC_Paramtr1_CSV",
+						"type": "DatasetReference",
+						"parameters": {
+							"ds_filesys_RJ": {
+								"value": "@pipeline().parameters.para_fs",
+								"type": "Expression"
+							},
+							"ds_Direc_RJ": {
+								"value": "@pipeline().parameters.para_Dir",
+								"type": "Expression"
+							}
+						}
 					},
 					"fieldList": [
 						"itemType",
-						"itemName"
+						"itemName",
+						"childItems"
 					],
 					"storeSettings": {
 						"type": "AzureBlobFSReadSettings",
