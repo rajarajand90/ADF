@@ -143,11 +143,9 @@
 			{
 				"name": "ForEach1",
 				"type": "ForEach",
-				"state": "Inactive",
-				"onInactiveMarkAs": "Succeeded",
 				"dependsOn": [
 					{
-						"activity": "Get Metadata FileName",
+						"activity": "Lookup",
 						"dependencyConditions": [
 							"Succeeded"
 						]
@@ -156,7 +154,7 @@
 				"userProperties": [],
 				"typeProperties": {
 					"items": {
-						"value": "@activity('Get Metadata FileName').output.childItems",
+						"value": "@activity('Lookup').output.value",
 						"type": "Expression"
 					},
 					"activities": [
@@ -188,7 +186,6 @@
 									"type": "AzureSqlSink",
 									"writeBehavior": "insert",
 									"sqlWriterUseTableLock": false,
-									"tableOption": "autoCreate",
 									"disableMetricsCollection": false
 								},
 								"enableStaging": false,
@@ -232,50 +229,7 @@
 				}
 			},
 			{
-				"name": "Get Metadata FileName",
-				"type": "GetMetadata",
-				"state": "Inactive",
-				"onInactiveMarkAs": "Succeeded",
-				"dependsOn": [],
-				"policy": {
-					"timeout": "0.12:00:00",
-					"retry": 0,
-					"retryIntervalInSeconds": 30,
-					"secureOutput": false,
-					"secureInput": false
-				},
-				"userProperties": [],
-				"typeProperties": {
-					"dataset": {
-						"referenceName": "SRC_Paramtr1_CSV",
-						"type": "DatasetReference",
-						"parameters": {
-							"ds_filesys_RJ": {
-								"value": "@pipeline().parameters.para_fs",
-								"type": "Expression"
-							},
-							"ds_Direc_RJ": {
-								"value": "@pipeline().parameters.para_Dir",
-								"type": "Expression"
-							}
-						}
-					},
-					"fieldList": [
-						"itemType",
-						"itemName",
-						"childItems"
-					],
-					"storeSettings": {
-						"type": "AzureBlobFSReadSettings",
-						"enablePartitionDiscovery": false
-					},
-					"formatSettings": {
-						"type": "DelimitedTextReadSettings"
-					}
-				}
-			},
-			{
-				"name": "Lookup1",
+				"name": "Lookup",
 				"type": "Lookup",
 				"dependsOn": [],
 				"policy": {
