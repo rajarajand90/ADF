@@ -82,7 +82,7 @@
 			},
 			"para_flnme": {
 				"type": "string",
-				"defaultValue": "customers.csv"
+				"defaultValue": "SalesLTAddress.txt"
 			}
 		},
 		"folder": {
