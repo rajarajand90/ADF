@@ -56,7 +56,10 @@
 				"outputs": [
 					{
 						"referenceName": "SinkCSV_RJ",
-						"type": "DatasetReference"
+						"type": "DatasetReference",
+						"parameters": {
+							"ds_filenameRJ": "ds_filenameRJ"
+						}
 					}
 				]
 			},

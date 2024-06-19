@@ -114,25 +114,10 @@
 				"userProperties": [],
 				"typeProperties": {
 					"dataset": {
-						"referenceName": "SRC_Paramtr_CSV",
-						"type": "DatasetReference",
-						"parameters": {
-							"ds_fs_RJ": {
-								"value": "@pipeline().parameters.para_fs",
-								"type": "Expression"
-							},
-							"ds_dir_RJ": {
-								"value": "@pipeline().parameters.para_Dir",
-								"type": "Expression"
-							},
-							"ds_filenm_RJ": {
-								"value": "@pipeline().parameters.para_flnme",
-								"type": "Expression"
-							}
-						}
+						"referenceName": "SourceCSV_RJ",
+						"type": "DatasetReference"
 					},
 					"fieldList": [
-						"childItems",
 						"itemType",
 						"itemName"
 					],
