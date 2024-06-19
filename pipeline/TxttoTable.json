@@ -73,13 +73,16 @@
 		],
 		"parameters": {
 			"para_fs": {
-				"type": "string"
+				"type": "string",
+				"defaultValue": "project"
 			},
 			"para_Dir": {
-				"type": "string"
+				"type": "string",
+				"defaultValue": "Output"
 			},
 			"para_flnme": {
-				"type": "string"
+				"type": "string",
+				"defaultValue": "customers.csv"
 			}
 		},
 		"folder": {
