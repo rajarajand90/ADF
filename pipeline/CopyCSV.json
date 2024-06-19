@@ -19,6 +19,16 @@
 				}
 			}
 		],
+		"variables": {
+			"fs_source": {
+				"type": "String",
+				"defaultValue": "value"
+			},
+			"fs_sink": {
+				"type": "String",
+				"defaultValue": "value"
+			}
+		},
 		"folder": {
 			"name": "Gopi_Assign"
 		},
