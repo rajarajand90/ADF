@@ -21,9 +21,18 @@
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobFSLocation",
-				"fileName": "SalesLTCustomer.txt",
-				"folderPath": "Output",
-				"fileSystem": "project"
+				"fileName": {
+					"value": "@dataset().ds_filenm_RJ",
+					"type": "Expression"
+				},
+				"folderPath": {
+					"value": "@dataset().ds_dir_RJ",
+					"type": "Expression"
+				},
+				"fileSystem": {
+					"value": "@dataset().ds_fs_RJ",
+					"type": "Expression"
+				}
 			},
 			"columnDelimiter": ",",
 			"escapeChar": "\\",
