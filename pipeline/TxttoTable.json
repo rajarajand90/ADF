@@ -5,14 +5,7 @@
 			{
 				"name": "TxtTOTable",
 				"type": "Copy",
-				"dependsOn": [
-					{
-						"activity": "FilterColor",
-						"dependencyConditions": [
-							"Succeeded"
-						]
-					}
-				],
+				"dependsOn": [],
 				"policy": {
 					"timeout": "0.12:00:00",
 					"retry": 0,
@@ -80,6 +73,8 @@
 			{
 				"name": "FilterColor",
 				"type": "Filter",
+				"state": "Inactive",
+				"onInactiveMarkAs": "Succeeded",
 				"dependsOn": [
 					{
 						"activity": "Get Metadata1",
@@ -95,7 +90,7 @@
 						"type": "Expression"
 					},
 					"condition": {
-						"value": "@contains(item().name,'SalesLTAddress.txt')",
+						"value": "@color == 'mary'",
 						"type": "Expression"
 					}
 				}
@@ -103,6 +98,8 @@
 			{
 				"name": "Get Metadata1",
 				"type": "GetMetadata",
+				"state": "Inactive",
+				"onInactiveMarkAs": "Succeeded",
 				"dependsOn": [],
 				"policy": {
 					"timeout": "0.12:00:00",
@@ -153,7 +150,7 @@
 			},
 			"para_flnme": {
 				"type": "string",
-				"defaultValue": "SalesLTAddress.txt"
+				"defaultValue": "SalesLTProduct.txt"
 			}
 		},
 		"folder": {
