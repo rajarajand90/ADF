@@ -61,6 +61,16 @@
 				]
 			}
 		],
+		"parameters": {
+			"Input_dir": {
+				"type": "string",
+				"defaultValue": "value"
+			},
+			"Output_dir": {
+				"type": "string",
+				"defaultValue": "value"
+			}
+		},
 		"variables": {
 			"fs_source": {
 				"type": "String",
