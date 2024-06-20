@@ -5,13 +5,24 @@
 			"referenceName": "AzureDataLakeStorage1",
 			"type": "LinkedServiceReference"
 		},
+		"parameters": {
+			"Input_dir": {
+				"type": "String"
+			},
+			"Output_dir": {
+				"type": "String"
+			}
+		},
 		"annotations": [],
 		"type": "DelimitedText",
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobFSLocation",
 				"fileName": "SalesLTProduct.txt",
-				"folderPath": "Input",
+				"folderPath": {
+					"value": "@dataset().Input_dir",
+					"type": "Expression"
+				},
 				"fileSystem": "project"
 			},
 			"columnDelimiter": "\t",
