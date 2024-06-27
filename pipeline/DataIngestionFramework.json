@@ -74,17 +74,7 @@
 				"outputs": [
 					{
 						"referenceName": "Unzip_SINK",
-						"type": "DatasetReference",
-						"parameters": {
-							"ds_fs": {
-								"value": "@pipeline().parameters.fs",
-								"type": "Expression"
-							},
-							"ds_dir": {
-								"value": "@pipeline().parameters.bronzeoutputdirectory",
-								"type": "Expression"
-							}
-						}
+						"type": "DatasetReference"
 					}
 				]
 			}
