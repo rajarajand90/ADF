@@ -81,7 +81,7 @@
 								"type": "Expression"
 							},
 							"ds_dir": {
-								"value": "@pipeline().parameters.dir",
+								"value": "@pipeline().parameters.bronzeoutputdirectory",
 								"type": "Expression"
 							}
 						}
