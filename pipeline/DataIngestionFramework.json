@@ -99,10 +99,12 @@
 				"defaultValue": "Input"
 			},
 			"inputzipfilename": {
-				"type": "string"
+				"type": "string",
+				"defaultValue": "AdventureWorksLT2012.zip"
 			},
 			"bronzeoutputdirectory": {
-				"type": "string"
+				"type": "string",
+				"defaultValue": "Bronze"
 			}
 		},
 		"folder": {
