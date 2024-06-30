@@ -51,7 +51,7 @@
 						"type": "Expression"
 					},
 					"condition": {
-						"value": "@item().color='Red'",
+						"value": "@item('Red')",
 						"type": "Expression"
 					}
 				}
