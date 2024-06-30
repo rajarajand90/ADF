@@ -32,6 +32,25 @@
 					},
 					"firstRowOnly": false
 				}
+			},
+			{
+				"name": "Filter1",
+				"type": "Filter",
+				"dependsOn": [
+					{
+						"activity": "Lookup1",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
+				"userProperties": [],
+				"typeProperties": {
+					"items": {
+						"value": "@activity('Lookup1').output.value[5]",
+						"type": "Expression"
+					}
+				}
 			}
 		],
 		"folder": {
