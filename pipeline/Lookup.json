@@ -47,7 +47,11 @@
 				"userProperties": [],
 				"typeProperties": {
 					"items": {
-						"value": "@activity('Lookup1').output.value[5]",
+						"value": "@activity('Lookup1').output.value[3]",
+						"type": "Expression"
+					},
+					"condition": {
+						"value": "@item().color='Red'",
 						"type": "Expression"
 					}
 				}
