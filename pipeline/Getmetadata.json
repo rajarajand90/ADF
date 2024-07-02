@@ -30,6 +30,29 @@
 						"type": "DelimitedTextReadSettings"
 					}
 				}
+			},
+			{
+				"name": "Filter Color",
+				"type": "Filter",
+				"dependsOn": [
+					{
+						"activity": "Get Meta Data",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
+				"userProperties": [],
+				"typeProperties": {
+					"items": {
+						"value": "@activity('Get Meta Data').output.structure",
+						"type": "Expression"
+					},
+					"condition": {
+						"value": "@activity('Get Meta Data').output.columnCount",
+						"type": "Expression"
+					}
+				}
 			}
 		],
 		"folder": {
