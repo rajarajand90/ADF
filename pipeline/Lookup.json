@@ -49,10 +49,6 @@
 					"items": {
 						"value": "@activity('Lookup1').output.value[3]",
 						"type": "Expression"
-					},
-					"condition": {
-						"value": "@item('Red')",
-						"type": "Expression"
 					}
 				}
 			}
