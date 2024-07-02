@@ -1,6 +1,36 @@
 {
 	"name": "Assign_GP1_ForEach",
 	"properties": {
+		"activities": [
+			{
+				"name": "GetMetadata_FromInput",
+				"description": "Getting files information from Input folder",
+				"type": "GetMetadata",
+				"dependsOn": [],
+				"policy": {
+					"timeout": "0.12:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"dataset": {
+						"referenceName": "getmetadata_assign_gp1",
+						"type": "DatasetReference"
+					},
+					"fieldList": [],
+					"storeSettings": {
+						"type": "AzureBlobFSReadSettings",
+						"enablePartitionDiscovery": false
+					},
+					"formatSettings": {
+						"type": "DelimitedTextReadSettings"
+					}
+				}
+			}
+		],
 		"folder": {
 			"name": "VTR_Test"
 		},
