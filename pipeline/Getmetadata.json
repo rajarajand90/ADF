@@ -45,11 +45,11 @@
 				"userProperties": [],
 				"typeProperties": {
 					"items": {
-						"value": "@activity('Get Meta Data').output.structure[3]",
+						"value": "@activity('Get Meta Data').output.structure",
 						"type": "Expression"
 					},
 					"condition": {
-						"value": "@activity('Get Meta Data').output.columnCount",
+						"value": "@item()",
 						"type": "Expression"
 					}
 				}
