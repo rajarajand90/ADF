@@ -34,9 +34,11 @@
 			{
 				"name": "Filter Color",
 				"type": "Filter",
+				"state": "Inactive",
+				"onInactiveMarkAs": "Succeeded",
 				"dependsOn": [
 					{
-						"activity": "Get Meta Data",
+						"activity": "ForEach1",
 						"dependencyConditions": [
 							"Succeeded"
 						]
@@ -50,6 +52,25 @@
 					},
 					"condition": {
 						"value": "@item()",
+						"type": "Expression"
+					}
+				}
+			},
+			{
+				"name": "ForEach1",
+				"type": "ForEach",
+				"dependsOn": [
+					{
+						"activity": "Get Meta Data",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
+				"userProperties": [],
+				"typeProperties": {
+					"items": {
+						"value": "@activity('Get Meta Data').output.itemName",
 						"type": "Expression"
 					}
 				}
