@@ -1,0 +1,9 @@
+{
+	"name": "Assign_GP2_ForeachFolder",
+	"properties": {
+		"folder": {
+			"name": "VTR_Test"
+		},
+		"annotations": []
+	}
+}
