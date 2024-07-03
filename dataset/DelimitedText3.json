@@ -14,7 +14,9 @@
 		"type": "DelimitedText",
 		"typeProperties": {
 			"location": {
-				"type": "AzureBlobFSLocation"
+				"type": "AzureBlobFSLocation",
+				"folderPath": "FOLDERGP/Output/Text",
+				"fileSystem": "project"
 			},
 			"columnDelimiter": ",",
 			"escapeChar": "\\",
