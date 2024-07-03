@@ -1,5 +1,5 @@
 {
-	"name": "Assign_GP2_ForeachFolder",
+	"name": "Assign_GP2_FileTypeMove",
 	"properties": {
 		"folder": {
 			"name": "VTR_Test"
