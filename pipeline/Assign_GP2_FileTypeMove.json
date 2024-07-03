@@ -89,7 +89,7 @@
 									"type": "DelimitedTextSource",
 									"storeSettings": {
 										"type": "AzureBlobFSReadSettings",
-										"fileListPath": "project/FOLDERGP/TextFiles.txt",
+										"recursive": true,
 										"enablePartitionDiscovery": false
 									},
 									"formatSettings": {
@@ -122,17 +122,17 @@
 									"referenceName": "DelimitedText2",
 									"type": "DatasetReference",
 									"parameters": {
-										"Filename": "Value"
+										"Filename": {
+											"value": "@item().name",
+											"type": "Expression"
+										}
 									}
 								}
 							],
 							"outputs": [
 								{
 									"referenceName": "DelimitedText3",
-									"type": "DatasetReference",
-									"parameters": {
-										"Filename": "Value"
-									}
+									"type": "DatasetReference"
 								}
 							]
 						}
