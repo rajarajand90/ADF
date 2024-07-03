@@ -129,7 +129,10 @@
 							"outputs": [
 								{
 									"referenceName": "DelimitedText3",
-									"type": "DatasetReference"
+									"type": "DatasetReference",
+									"parameters": {
+										"Filename": "Value"
+									}
 								}
 							]
 						}
