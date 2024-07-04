@@ -215,7 +215,10 @@
 												"outputs": [
 													{
 														"referenceName": "Binary13",
-														"type": "DatasetReference"
+														"type": "DatasetReference",
+														"parameters": {
+															"filename": "value"
+														}
 													}
 												]
 											}
