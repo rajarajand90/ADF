@@ -16,7 +16,7 @@
 			"location": {
 				"type": "AzureBlobFSLocation",
 				"fileName": {
-					"value": "@item().name",
+					"value": "@Items.name",
 					"type": "Expression"
 				},
 				"folderPath": "FOLDERGP/Input",
