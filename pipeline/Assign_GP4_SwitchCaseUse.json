@@ -99,19 +99,13 @@
 												"inputs": [
 													{
 														"referenceName": "Binary8",
-														"type": "DatasetReference",
-														"parameters": {
-															"Filename": "value"
-														}
+														"type": "DatasetReference"
 													}
 												],
 												"outputs": [
 													{
 														"referenceName": "Binary9",
-														"type": "DatasetReference",
-														"parameters": {
-															"filename": "value"
-														}
+														"type": "DatasetReference"
 													}
 												]
 											}
@@ -154,19 +148,13 @@
 												"inputs": [
 													{
 														"referenceName": "Binary10",
-														"type": "DatasetReference",
-														"parameters": {
-															"filename": "value"
-														}
+														"type": "DatasetReference"
 													}
 												],
 												"outputs": [
 													{
 														"referenceName": "Binary11",
-														"type": "DatasetReference",
-														"parameters": {
-															"filename": "value"
-														}
+														"type": "DatasetReference"
 													}
 												]
 											}
@@ -209,19 +197,13 @@
 												"inputs": [
 													{
 														"referenceName": "Binary12",
-														"type": "DatasetReference",
-														"parameters": {
-															"filename": "value"
-														}
+														"type": "DatasetReference"
 													}
 												],
 												"outputs": [
 													{
 														"referenceName": "Binary13",
-														"type": "DatasetReference",
-														"parameters": {
-															"filename": "value"
-														}
+														"type": "DatasetReference"
 													}
 												]
 											}
