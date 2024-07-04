@@ -53,8 +53,6 @@
 						{
 							"name": "Switch1",
 							"type": "Switch",
-							"state": "Inactive",
-							"onInactiveMarkAs": "Succeeded",
 							"dependsOn": [],
 							"userProperties": [],
 							"typeProperties": {
@@ -64,7 +62,7 @@
 								},
 								"cases": [
 									{
-										"value": "Case1",
+										"value": "csv",
 										"activities": [
 											{
 												"name": "Copy data1",
