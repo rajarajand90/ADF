@@ -49,47 +49,7 @@
 					"items": {
 						"value": "@activity('GetMetadata_FromInput').output.childItems",
 						"type": "Expression"
-					},
-					"activities": [
-						{
-							"name": "Copy_FromForEach_ToOutput2",
-							"type": "Copy",
-							"dependsOn": [],
-							"policy": {
-								"timeout": "0.12:00:00",
-								"retry": 0,
-								"retryIntervalInSeconds": 30,
-								"secureOutput": false,
-								"secureInput": false
-							},
-							"userProperties": [],
-							"typeProperties": {
-								"source": {
-									"type": "DelimitedTextSource",
-									"storeSettings": {
-										"type": "AzureBlobFSReadSettings",
-										"recursive": true,
-										"wildcardFolderPath": "Input",
-										"wildcardFileName": {
-											"value": "@item().name",
-											"type": "Expression"
-										},
-										"enablePartitionDiscovery": false
-									},
-									"formatSettings": {
-										"type": "DelimitedTextReadSettings"
-									}
-								},
-								"enableStaging": false
-							},
-							"inputs": [
-								{
-									"referenceName": "ds_filescopy",
-									"type": "DatasetReference"
-								}
-							]
-						}
-					]
+					}
 				}
 			}
 		],
