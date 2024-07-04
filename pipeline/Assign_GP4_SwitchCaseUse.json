@@ -57,7 +57,7 @@
 							"userProperties": [],
 							"typeProperties": {
 								"on": {
-									"value": "@item()",
+									"value": "@split(item()[1])",
 									"type": "Expression"
 								},
 								"cases": [
