@@ -46,7 +46,7 @@
 				"userProperties": [],
 				"typeProperties": {
 					"items": {
-						"value": "@activity('Get Metadata1').output.itemType",
+						"value": "@activity('Get Metadata1').output.itemName",
 						"type": "Expression"
 					},
 					"activities": [
