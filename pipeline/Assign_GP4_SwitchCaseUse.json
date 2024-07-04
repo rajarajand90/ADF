@@ -108,7 +108,10 @@
 												"outputs": [
 													{
 														"referenceName": "Binary9",
-														"type": "DatasetReference"
+														"type": "DatasetReference",
+														"parameters": {
+															"filename": "value"
+														}
 													}
 												]
 											}
