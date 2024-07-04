@@ -151,7 +151,10 @@
 												"inputs": [
 													{
 														"referenceName": "Binary10",
-														"type": "DatasetReference"
+														"type": "DatasetReference",
+														"parameters": {
+															"filename": "value"
+														}
 													}
 												],
 												"outputs": [
