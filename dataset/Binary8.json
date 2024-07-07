@@ -15,6 +15,10 @@
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobFSLocation",
+				"fileName": {
+					"value": "@dataset().fname",
+					"type": "Expression"
+				},
 				"folderPath": "FOLDERGP/Input",
 				"fileSystem": "project"
 			}
