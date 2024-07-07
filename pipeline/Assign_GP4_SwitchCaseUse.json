@@ -101,7 +101,10 @@
 												"inputs": [
 													{
 														"referenceName": "Binary8",
-														"type": "DatasetReference"
+														"type": "DatasetReference",
+														"parameters": {
+															"fname": "@item().name"
+														}
 													}
 												],
 												"outputs": [
